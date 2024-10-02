@@ -1,12 +1,19 @@
 import requests
 import json
 import time
+import os
+from dotenv import load_dotenv
 
+# Load .env from the parent directory
+load_dotenv('../.env')
+
+# Now you can access your environment variables
+openai_api_key = os.getenv('openai_api_key')
 
 class OPENAI:
     def __init__(self) -> None:
         # defining as a global variable
-        self.api_key = ''  # Replace this with your actual API key
+        self.api_key = openai_api_key # Replace this with your actual API key
 
     def create_prompt(self, data):
         prompt = """
