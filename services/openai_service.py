@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 
 # Load .env from the parent directory
-load_dotenv('../.env')
+load_dotenv('.env')
 
 # Now you can access your environment variables
 openai_api_key = os.getenv('openai_api_key')
